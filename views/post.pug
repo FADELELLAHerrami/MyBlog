@@ -1,0 +1,14 @@
+
+html 
+    head 
+        title Mon Blogue
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        div 
+         each post, i in posts 
+                .card
+                    img(src='/image/'+post.image)
+                    h1 #{post.title}  
+                    a(href="/PostDedails/"+ post._id) Plus   
+                    a(href="/editPost/"+ post._id) Modifier
+                    a(href="/deletePost/"+ post._id) Supprimer
